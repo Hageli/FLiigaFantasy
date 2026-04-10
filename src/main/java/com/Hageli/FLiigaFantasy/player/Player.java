@@ -14,6 +14,7 @@ public class Player {
     private String name;
     private String nationality;
     private String position;
+    private String teamName;
     private Integer age;
     // private Integer games;
     private Integer assists;
@@ -25,7 +26,7 @@ public class Player {
 
     }
 
-    public Player(Integer jersey_number, Integer points, Integer goals, Integer assists, Integer age, String position, String nationality, String name, Integer id) {
+    public Player(Integer jersey_number, Integer points, Integer goals, Integer assists, Integer age, String position, String nationality, String name, Integer id, String teamName) {
         this.jersey_number = jersey_number;
         this.points = points;
         this.goals = goals;
@@ -35,6 +36,7 @@ public class Player {
         this.nationality = nationality;
         this.name = name;
         this.id = id;
+        this.teamName = teamName;
     }
 
     public Integer getId() {
@@ -61,12 +63,20 @@ public class Player {
         return assists;
     }
 
+    public String getTeamName() {
+        return teamName;
+    }
+
     public Integer getGoals() {
         return goals;
     }
 
     public Integer getPoints() {
         return points;
+    }
+
+    public void setTeamName(String teamName) {
+        this.teamName = teamName;
     }
 
     public Integer getJersey_number() {
